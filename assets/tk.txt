@@ -1,0 +1,11 @@
+Quản trị viên:
+    TK: admin
+    MK: 123456
+
+Học sinh:
+    TK: student
+    MK: 159
+
+Giảng viên:
+    TK: teacher
+    MK: 123

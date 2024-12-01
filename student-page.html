@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Student Dashboard</title>
+		<link rel="stylesheet" href="./assets/css/student-page.css" />
+		<link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+	</head>
+	<body>
+		<div class="sidebar">
+			<div class="logo">
+				<img src="./assets/img/logo.png" alt="Logo Trường" />
+			</div>
+			<hr class="divider" />
+			<div class="profile">
+				<img src="./assets/img/default-profile.png" alt="Avatar" />
+				<div class="info">
+					<h6>Trần Xuân Huyền</h6>
+					<h6>48.01.104.123</h6>
+					<p>Học Sinh</p>
+				</div>
+			</div>
+			<hr class="divider" />
+			<nav class="nav">
+				<p>CHỨC NĂNG</p>
+				<div class="nav-item active" id="personal-info-btn">
+					<span>Thông tin cá nhân</span>
+				</div>
+				<div class="nav-item" id="attendance-history-btn">
+					<span>Lịch sử điểm danh</span>
+				</div>
+			</nav>
+		</div>
+
+		<div class="container">
+			<div class="topbar">
+				<h1>TRƯỜNG THPT BÙI THỊ XUÂN</h1>
+				<div class="logout-btn" id="logout-btn">
+					<span>Đăng xuất</span>
+				</div>
+			</div>
+			<div class="content">
+				<div id="personal-info" class="section">
+					<h2>THÔNG TIN CÁ NHÂN</h2>
+					<table class="info-table">
+						<tr>
+							<th>Mã học sinh</th>
+							<td>48.01.104.123</td>
+						</tr>
+						<tr>
+							<th>Họ tên</th>
+							<td>Trần Xuân Huyền</td>
+						</tr>
+						<tr>
+							<th>Mã lớp</th>
+							<td>12A1</td>
+						</tr>
+						<tr>
+							<th>Ngày sinh</th>
+							<td>26/10/2004</td>
+						</tr>
+						<tr>
+							<th>Giới tính</th>
+							<td>Nữ</td>
+						</tr>
+						<tr>
+							<th>Số điện thoại</th>
+							<td>0123456789</td>
+						</tr>
+						<tr>
+							<th>Họ tên cha</th>
+							<td>Nguyễn Văn A</td>
+						</tr>
+						<tr>
+							<th>Họ tên mẹ</th>
+							<td>Nguyễn Thị B</td>
+						</tr>
+						<tr>
+							<th>Quê quán</th>
+							<td>Tỉnh Bình Định</td>
+						</tr>
+						<tr>
+							<th>Ảnh khuôn mặt</th>
+							<td id="face-photo-status">
+								<span class="status">Null</span>
+								<div class="buttons">
+									<button id="view-btn" class="btn-view">
+										Xem
+									</button>
+									<button id="update-btn" class="btn-update">
+										Cập nhật
+									</button>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div id="attendance-history" class="section hidden">
+					<h2>LỊCH SỬ ĐIỂM DANH</h2>
+
+					<!-- Dropdowns for Tuần, Học kỳ, Năm học -->
+					<div class="dropdown-container">
+						<div class="item">
+							<label for="week-dropdown">Tuần:</label>
+							<select id="week-dropdown">
+								<option value="week-1">Tuần 1</option>
+								<option value="week-2">Tuần 2</option>
+								<option value="week-3">Tuần 3</option>
+								<!-- Add more weeks as needed -->
+							</select>
+						</div>
+
+						<div class="item">
+							<label for="semester-dropdown">Học kỳ:</label>
+							<select id="semester-dropdown">
+								<option value="semester-1">Học kỳ 1</option>
+								<option value="semester-2">Học kỳ 2</option>
+							</select>
+						</div>
+
+						<div class="item">
+							<label for="year-dropdown">Năm học:</label>
+							<select id="year-dropdown">
+								<option value="2023-2024">2023-2024</option>
+								<option value="2024-2025">2024-2025</option>
+								<option value="2025-2026">2025-2026</option>
+								<!-- Add more years as needed -->
+							</select>
+						</div>
+					</div>
+
+					<table class="history-table">
+						<thead>
+							<tr>
+								<th>Ngày</th>
+								<th>Trạng thái</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>15/11/2024</td>
+								<td class="yes">Đã điểm danh</td>
+							</tr>
+							<tr>
+								<td>14/11/2024</td>
+								<td class="no">Chưa điểm danh</td>
+							</tr>
+							<tr>
+								<td>13/11/2024</td>
+								<td class="yes">Đã điểm danh</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- Toast Notification -->
+		<div id="toast" class="toast"></div>
+
+		<script src="./assets/js/student-page.js"></script>
+	</body>
+</html>
